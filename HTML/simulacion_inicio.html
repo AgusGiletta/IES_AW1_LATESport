@@ -10,41 +10,107 @@
 </head>
 
 <body>
-  <div class="content-wrapper">
-    <nav class="navbar navbar-expand-lg px-4 w-100">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="../Assets/Late logo_page-0001.jpg" alt="Logo Tienda Deportiva" width="100" height="70">
-        </a>
+  <header> </header>
+  <input type="hidden" id="pageName" value="Simulacion">
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav gap-3">
-              <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link" href="accesorios.html">Accesorios</a></li>
-              <li class="nav-item"><a class="nav-link" href="mujer.html">Mujer</a></li>
-              <li class="nav-item"><a class="nav-link" href="hombre.html">Hombre</a></li>
-            </ul>
-          </div>  
-
-        <div class="d-flex gap-2">
-            <a href="index.html" class="btn btn-outline-danger ms-4">
-               <i class="bi bi-box-arrow-right"></i> Cerrar sesión
-            </a>
-        </div>
-      </div>
-    </nav>
-
-    <main class="container text-center centered-title">
-      <h1 class="display-5 fw-bold mb-4">Bienvenidos a la Tienda Deportiva</h1>
-      <img src="../Assets/mr-lee-f4RBYsY2hxA-unsplash.jpg" alt="Foto" class="img-fluid rounded shadow-sm w-100" style="max-height: 500px; object-fit: cover;">
-    </main>
-
-    <footer class="text-center py-3">
-      <p class="mb-0">© 2023 Tienda Deportiva. Todos los derechos reservados.</p>
-    </footer>
-
+  <div class="container text-center centered-title">
+    <h1 id="title"></h1>
+    <img src="../Assets/inicio/photo-1522898467493-49726bf28798.jpg" alt="Foto" class="img-fluid rounded shadow-sm w-100" style="max-height: 500px; object-fit: cover;">
+    <div id="cardContainer" class="my-5"></div>
+  </div>
   </div>
 
+  <section class="container my-5"> <h2 class="text-center mb-4">Sobre Nosotros</h2> 
+      <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h5 class="card-title">Quiénes somos</h5>
+                <p class="card-text">Somos LATE Sport, una tienda apasionada por el deporte que ofrece productos de alta calidad para atletas y aficionados.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h5 class="card-title">Qué hacemos</h5>
+                <p class="card-text">Ofrecemos una amplia variedad de accesorios, ropa deportiva y calzado para hombre y mujer, garantizando comodidad y rendimiento.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h5 class="card-title">Dónde encontrarnos</h5>
+                <p class="card-text">Puedes visitarnos en nuestra tienda física en Av. Deportes 123, San Francisco, o contáctanos en nuestras redes sociales.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="container my-5"> <h2 class="text-center mb-4">Preguntas Frecuentes</h2> <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+          <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true">
+            ¿Cuál es el horario de atención?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Estamos abiertos de lunes a viernes de 9 a 18 hs, y los sábados de 9 a 13 hs.
+          </div>
+        </div>
+    </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+      <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+        ¿Hacen envíos a todo el país?
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Sí, realizamos envíos a todo el territorio argentino a través de correo o transporte.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading3">
+      <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+        ¿Se puede pagar con tarjeta?
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Aceptamos todas las tarjetas de débito y crédito, además de transferencias.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading4">
+      <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+        ¿Puedo cambiar un producto?
+      </button>
+    </h2>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Sí, tenés 15 días para cambios. Solo necesitás el ticket y que el producto esté en condiciones.
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  <div id="footer-placeholder" class="mt-5"></div>
+
+  <script type="module" src="../JS/pages/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/componentes/footer/footer.js"></script>
+  <script src="../JS/componentes/navbar/navbar.js"></script>
+
 </body>
 </html>

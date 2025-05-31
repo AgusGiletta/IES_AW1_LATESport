@@ -10,87 +10,27 @@
 </head>
 
 <body>
-  <div class="content-wrapper">
-    <nav class="navbar navbar-expand-lg px-4 w-100">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="../Assets/Late logo_page-0001.jpg" alt="Logo Tienda Deportiva" width="100" height="70">
-        </a>
+    <header> </header>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav gap-3">
-              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link" href="accesorios.html">Accesorios</a></li>
-              <li class="nav-item"><a class="nav-link active" href="mujer.html">Mujer</a></li>
-              <li class="nav-item"><a class="nav-link" href="hombre.html">Hombre</a></li>
-            </ul>
-          </div>  
+    <input type="hidden" id="pageName" value="Mujer"> 
+
+    <div class="container text-center centered-title">
+      <h1 id="title"></h1>
+    </div>
+
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="productContainer">
       </div>
-    </nav>
+    </div>
 
-    <main class="container text-center centered-title">
-      <h1 class="display-5 fw-bold mb-4">Mujer</h1>
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="../Assets/88a5c5aa-9b25-4fa3-a8c2-5c8dfaff8696-removebg-preview.png" class="card-img-top" alt="Producto 1">
-              <div class="card-body text-center">
-                <h5 class="card-title">Producto 1</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="fw-bold">$9.990</p>
-                <a href="#" class="btn btn-outline-danger d-block mx-auto mt-3" style="width: fit-content;">Ver más</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="../Assets/88a5c5aa-9b25-4fa3-a8c2-5c8dfaff8696-removebg-preview.png" class="card-img-top" alt="Producto 2">
-              <div class="card-body text-center">
-                <h5 class="card-title">Producto 2</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="fw-bold">$12.490</p>
-                <a href="#" class="btn btn-outline-danger d-block mx-auto mt-3" style="width: fit-content;">Ver más</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="../Assets/88a5c5aa-9b25-4fa3-a8c2-5c8dfaff8696-removebg-preview.png" class="card-img-top" alt="Producto 3">
-              <div class="card-body text-center">
-                <h5 class="card-title">Producto 3</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="fw-bold">$7.850</p>
-                <a href="#" class="btn btn-outline-danger d-block mx-auto mt-3" style="width: fit-content;">Ver más</a>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="../Assets/88a5c5aa-9b25-4fa3-a8c2-5c8dfaff8696-removebg-preview.png" class="card-img-top" alt="Producto 4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Producto 4</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="fw-bold">$15.000</p>
-                <a href="#" class="btn btn-outline-danger d-block mx-auto mt-3" style="width: fit-content;">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-    <footer class="text-center py-3">
-      <p class="mb-0">© 2023 Tienda Deportiva. Todos los derechos reservados.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+        
+    <script type="module" src="../JS/pages/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/componentes/footer/footer.js"></script>
+    <script src="../JS/componentes/navbar/navbar.js"></script>
+    <script src="../JS/componentes/cards/rendercards.js"></script>
+    <script src="../JS/componentes/cards/mujer.js"></script>
 
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
