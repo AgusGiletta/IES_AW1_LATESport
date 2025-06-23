@@ -1,41 +1,59 @@
-const accesoriosProducts = [
+/*const accesoriosProducts = [
   {
-    title: "Accesorio 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Piluso Nike Unisex Negro",
+    description: "Diseño clásico y urbano con logo bordado. Protege del sol con estilo y comodidad.",
     price: 9990,
     image: "../Assets/accesorios/accesorio1.avif"
   },
   {
-    title: "Accesorio 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Medias Largas Nike (Pack x3)",
+    description: "Pack de tres pares con ajuste perfecto. Ideales para entrenamientos y uso diario.",
     price: 10500,
     image: "../Assets/accesorios/accesorio2.avif"
   },
   {
-    title: "Accesorio 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Canilleras Nike Mercurial Lite",
+    description: "Protección liviana y anatómica para tus partidos. Incluyen fundas de compresión.",
     price: 700,
     image: "../Assets/accesorios/accesorio3.avif"
   },
   {
-    title: "Accesorio 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Gorra Nike Pro Blanca",
+    description: "Con paneles microperforados para una ventilación óptima. Perfecta para entrenar al aire libre.",
     price: 5896,
     image: "../Assets/accesorios/accesorio4.avif"
   },
   {
-    title: "Accesorio 5",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pelota Nike Pitch Training",
+    description: "Pelota de entrenamiento duradera y precisa. Ideal para mejorar tu juego.",
     price: 36220,
     image: "../Assets/accesorios/accesorio5.avif"
   },
   {
-    title: "Accesorio 6",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Cinturón de Entrenamiento Nike",
+    description: "Lorem ipSoporte lumbar ajustable para entrenamientos de fuerza. Entrená con seguridad y confort.",
     price: 89,
     image: "../Assets/accesorios/accesorio6.avif"
   }
 ];
 
 renderCards(accesoriosProducts, 'productContainer');
-attachCardEvents();
+attachCardEvents();*/
+
+fetch('../JSON/accesorios.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('No se pudo cargar el archivo JSON de accesorios.');
+    }
+    return response.json();
+  })
+  .then(accesoriosProducts => {
+    console.log('Productos cargados:', accesoriosProducts); // para verificar en consola
+    renderCards(accesoriosProducts, 'productContainer');
+    attachCardEvents();
+  })
+  .catch(error => {
+    console.error('Error al cargar productos:', error);
+  });
+
+

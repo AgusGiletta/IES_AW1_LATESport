@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Piluso Nike Unisex Negro",
+    "description": "Diseño clásico y urbano con logo bordado. Protege del sol con estilo y comodidad.",
+    "price": 9990,
+    "image": "../Assets/accesorios/accesorio1.avif"
+  },
+  {
+    "title": "Medias Largas Nike (Pack x3)",
+    "description": "Pack de tres pares con ajuste perfecto. Ideales para entrenamientos y uso diario.",
+    "price": 10500,
+    "image": "../Assets/accesorios/accesorio2.avif"
+  },
+  {
+    "title": "Canilleras Nike Mercurial Lite",
+    "description": "Protección liviana y anatómica para tus partidos. Incluyen fundas de compresión.",
+    "price": 700,
+    "image": "../Assets/accesorios/accesorio3.avif"
+  },
+  {
+    "title": "Gorra Nike Pro Blanca",
+    "description": "Con paneles microperforados para una ventilación óptima. Perfecta para entrenar al aire libre.",
+    "price": 5896,
+    "image": "../Assets/accesorios/accesorio4.avif"
+  },
+  {
+    "title": "Pelota Nike Pitch Training",
+    "description": "Pelota de entrenamiento duradera y precisa. Ideal para mejorar tu juego.",
+    "price": 36220,
+    "image": "../Assets/accesorios/accesorio5.avif"
+  },
+  {
+    "title": "Cinturón de Entrenamiento Nike",
+    "description": "Soporte lumbar ajustable para entrenamientos de fuerza. Entrená con seguridad y confort.",
+    "price": 89,
+    "image": "../Assets/accesorios/accesorio6.avif"
+  }
+]
+
+
+
+
+

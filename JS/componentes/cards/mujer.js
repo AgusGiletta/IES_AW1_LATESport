@@ -1,37 +1,37 @@
-const accesoriosProducts = [
+/*const accesoriosProducts = [
   {
-    title: "Mujer 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Camiseta Nike Strike Negra",
+    description: "Diseño deportivo con estilo urbano. Ideal para entrenamientos o un look casual y cómodo.",
     price: 9990,
     image: "../Assets/mujer/mujer1.avif"
   },
   {
-    title: "Mujer 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Campera Nike Oversize Celeste",
+    description: "Campera liviana de corte amplio. Comodidad total para tus actividades o salidas informales.",
     price: 5963,
     image: "../Assets/mujer/mujer2.avif"
   },
   {
-    title: "Mujer 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Camiseta Nike Francia Oficial",
+    description: "Camiseta oficial de la selección francesa. Calidad premium para hinchas y atletas.",
     price: 7410,
     image: "../Assets/mujer/mujer3.avif"
   },
   {
-    title: "Mujer 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Camiseta Nike Noruega Oficial",
+    description: "Representá a tu selección con esta camiseta roja de edición oficial. Cómoda y elegante.",
     price: 9963,
     image: "../Assets/mujer/mujer4.avif"
   },
   {
-    title: "Mujer 5",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Short Deportivo Nike Negro",
+    description: "Short de alto rendimiento con ajuste perfecto. Ideal para entrenamientos de alta intensidad.",
     price: 8887,
     image: "../Assets/mujer/mujer5.avif"
   },
   {
-    title: "Mujer 6",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Musculosa Nike Dri-FIT Blanca",
+    description: "Tecnología Dri-FIT para mantenerte fresca y seca. Prenda esencial para entrenar o el día a día.",
     price: 454,
     image: "../Assets/mujer/mujer6.avif"
   }
@@ -39,4 +39,19 @@ const accesoriosProducts = [
 
 
 renderCards(accesoriosProducts, 'productContainer');
-attachCardEvents();
+attachCardEvents();*/
+
+fetch('../JSON/mujer.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('No se pudo cargar el archivo JSON de mujer.');
+    }
+    return response.json();
+  })
+  .then(mujerProducts => {
+    renderCards(mujerProducts, 'productContainer');
+    attachCardEvents();
+  })
+  .catch(error => {
+    console.error('Error al cargar productos mujer:', error);
+  });
