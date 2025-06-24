@@ -1,0 +1,23 @@
+[
+  {
+    "email": "juan.perez@example.com",
+    "pass": "123456",
+    "usuario": "juanp",
+    "nombre": "Juan",
+    "apellido": "Pérez"
+  },
+  {
+    "email": "maria.gomez@example.com",
+    "pass": "password123",
+    "usuario": "mariag",
+    "nombre": "María",
+    "apellido": "Gómez"
+  },
+  {
+    "email": "carlos.lopez@example.com",
+    "pass": "qwerty",
+    "usuario": "carlosl",
+    "nombre": "Carlos",
+    "apellido": "López"
+  }
+]

@@ -41,7 +41,7 @@
 renderCards(accesoriosProducts, 'productContainer');
 attachCardEvents();*/
 
-fetch('../JSON/mujer.json')
+/*fetch('../JSON/mujer.json')
   .then(response => {
     if (!response.ok) {
       throw new Error('No se pudo cargar el archivo JSON de mujer.');
@@ -54,4 +54,16 @@ fetch('../JSON/mujer.json')
   })
   .catch(error => {
     console.error('Error al cargar productos mujer:', error);
-  });
+});*/
+
+  import { renderCards, attachCardEvents } from "./rendercards.js";
+  import { actualizarContadorCarrito } from "../../utils.js";
+  
+  fetch('../JSON/mujer.json')  
+  .then(res => res.json())
+  .then(products => {
+    renderCards(products, 'productContainer');  
+    attachCardEvents();                         
+    actualizarContadorCarrito();
+  })
+  .catch(console.error);

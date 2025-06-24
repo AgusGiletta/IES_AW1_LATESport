@@ -40,20 +40,17 @@
 renderCards(accesoriosProducts, 'productContainer');
 attachCardEvents();*/
 
+import { renderCards, attachCardEvents } from "./rendercards.js";
+import { actualizarContadorCarrito } from "../../utils.js";
+
 fetch('../JSON/accesorios.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('No se pudo cargar el archivo JSON de accesorios.');
-    }
-    return response.json();
+  .then(res => res.json())
+  .then(products => {
+    renderCards(products, 'productContainer');  // Primero renderizar
+    attachCardEvents();                         // Luego asignar eventos (con validación)
+    actualizarContadorCarrito();
   })
-  .then(accesoriosProducts => {
-    console.log('Productos cargados:', accesoriosProducts); // para verificar en consola
-    renderCards(accesoriosProducts, 'productContainer');
-    attachCardEvents();
-  })
-  .catch(error => {
-    console.error('Error al cargar productos:', error);
-  });
+  .catch(console.error);
+
 
 
